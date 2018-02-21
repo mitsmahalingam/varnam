@@ -97,8 +97,8 @@ body {
     </div>
   </div>
   <div class="side right">
-      <!------------------------ Points for RED ---------------->
-  <div>0</div>
+      <!-- --------------------- Points for RED -------------- -->
+  <div id="redbar">0</div>
   </div>
   <div class="side">
     <div>Green</div>
@@ -109,8 +109,8 @@ body {
     </div>
   </div>
   <div class="side right">
-      <!------------------------ Points for GREEN ---------------->
-    <div>0</div>
+      <!-- ---------------------- Points for GREEN -------------- -->
+    <div id="greenbar">0</div>
   </div>
   <div class="side">
     <div>Yellow</div>
@@ -121,8 +121,8 @@ body {
     </div>
   </div>
   <div class="side right">
-      <!------------------------ Points for YELLOW ---------------->
-    <div>0</div>
+      <!-- ---------------------- Points for YELLOW -------------- -->
+    <div id="yellowbar">0</div>
   </div>
   <div class="side">
     <div>Blue</div>
@@ -133,10 +133,37 @@ body {
     </div>
   </div>
   <div class="side right">
-      <!------------------------ Points for BLUE ---------------->
-    <div>0</div>
+      <!-- ---------------------- Points for BLUE -------------- -->
+    <div id="bluebar">0</div>
   </div>
-  
+  <script>
+      var r = parseInt(document.getElementById('redbar').innerHTML);
+      var b = parseInt(document.getElementById('bluebar').innerHTML);
+      var g = parseInt(document.getElementById('greenbar').innerHTML);
+      var y = parseInt(document.getElementById('yellowbar').innerHTML);
+      var max=r;
+      if(b>max)
+          max=b;
+      if(g>max)
+          max=g;
+      if(y>max)
+          max=y;
+      if(max==0)
+      {
+          document.getElementByClassName('bar-5').style.width=("0px");
+          document.getElementByClassName('bar-4').style.width=("0px");
+          document.getElementByClassName('bar-3').style.width=("0px");
+          document.getElementByClassName('bar-2').style.width=("0px");
+      }
+      else
+      {
+          document.getElementByClassName('bar-5').style.width=(((r/max)*100)+"px");
+          document.getElementByClassName('bar-4').style.width=(((g/max)*100)+"px");
+          document.getElementByClassName('bar-3').style.width=(((y/max)*100)+"px");
+          document.getElementByClassName('bar-2').style.width=(((b/max)*100)+"px");
+
+      }
+    </script>
 </div>
 
 </body>
