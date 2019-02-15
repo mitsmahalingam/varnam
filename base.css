@@ -1,0 +1,30 @@
+body
+{
+    background-repeat: no-repeat;
+}
+
+.image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding: 250px;
+}
+
+.upd
+{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 10%;
+     margin-left: 39%;
+}
+
+.face
+{
+    position: relative;
+    top: auto;
+    left: 67%;
+}
+
